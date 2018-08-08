@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github Recommender!</title>
+</head>
+     <title>Demo Form</title>
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<body>
+
+    <div class="container"><br>
+      <center>
+        <h1>Find Similar Github Projects!</h1>
+      </center>
+    </div>
+
+    <div class=container"><br>
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-4">
+
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+
+        <div class="form-group">
+
+            {{form.repository.label(class='form-control-label')}}
+            {{form.repository(class='form-control form-control-lg', placeholder="user/repo")}}
+
+        </div>
+
+        <center>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </center>
+
+    </form>
+
+
+</body>
+</html>

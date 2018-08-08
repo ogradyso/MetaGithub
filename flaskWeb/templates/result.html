@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+</style>
+</head>
+
+<body>
+    <center><h1>Repositories Similar to <i><a href="http://github.com/{{query}}">{{query}}</a></i>
+    </h1></center>
+
+    {% if recs is none %}
+        <p>We do not have any recommendations because this repository was not among the top repositories we analyzed.</p>
+
+    {% else %}
+
+        <table style="width:100%">
+        <tr>
+            <th>Repository</th>
+            <th>Similarity Score</th>
+        </tr>
+
+            {% for rec in recs %}
+
+                <tr>
+                    <td> <a href="http://github.com/{{rec.name}}">{{rec.name}}</a> </td>
+                    <td> {{rec.score}} </td>
+                </tr>
+
+            {% endfor %}
+
+        </table>
+
+    {% endif %}
+
+</body>
+</html>
