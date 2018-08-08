@@ -10,8 +10,8 @@ app.config.from_object(__name__)
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 # load data
-model = pickle.load(open("/Users/amy/git/MetaGithub/cf_recommender.model", 'rb'))
-data = pickle.load(open("/Users/amy/git/MetaGithub/cf_recommender.df", 'rb'))
+model = pickle.load(open("cf_recommender.model", 'rb'))
+data = pickle.load(open("cf_recommender.df", 'rb'))
 
 
 # search form
